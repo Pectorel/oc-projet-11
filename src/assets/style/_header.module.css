@@ -1,0 +1,29 @@
+#page-header {
+    color: inherit;
+    margin: 2.5rem auto 4em;
+}
+
+.d-flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.header-logo{
+    max-width: 210px;
+    height: auto;
+}
+
+/* Nav links */
+.nav-link {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-link:not(:last-child) {
+    margin-right: 3.5rem;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}

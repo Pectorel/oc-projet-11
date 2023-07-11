@@ -1,0 +1,57 @@
+/*
+    Main CSS File containing all global data and classes
+*/
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Root settings */
+:root {
+    /* Custom Properties */
+    --color-bg-primary: #fff;
+    --color-bg-secondary: #ff6060;
+    --color-txt-primary: var(--color-bg-secondary);
+    --color-txt-secondary: var(--color-bg-primary);
+
+    /* Font */
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    font-synthesis: none;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--color-txt-primary);
+
+    /* Background */
+    background: var(--color-bg-primary);
+
+}
+
+/* Tiny Reset */
+* {
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper */
+.wrapper{
+    display: block;
+    width: 1240px;
+    margin: auto;
+
+}
+
+/* Display Utilities */
+.d-block {
+    display: block;
+}
+
+.d-i-block {
+    display: inline-block;
+}
+
+.d-flex{
+    display: flex;
+}
