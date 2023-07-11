@@ -1,0 +1,26 @@
+.banner {
+    background: transparent no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    padding: 4.875rem 0;
+    color: var(--color-txt-secondary);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 40%);
+}
+
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 4;
+}
