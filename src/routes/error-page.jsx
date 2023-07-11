@@ -1,4 +1,4 @@
-import styles from "./assets/style/error-page.module.css";
+import styles from "../assets/style/error-page.module.css";
 
 function ErrorPage() {
   return (
