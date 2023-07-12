@@ -1,5 +1,6 @@
 import logo from "../assets/img/logo.svg";
 import styles from "../assets/style/_header.module.css";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -17,12 +18,22 @@ function Header() {
         </a>
       </h1>
       <nav>
-        <a href={"/"} className={styles["nav-link"]}>
+        <NavLink
+          to={"/"}
+          className={({ isActive }) =>
+            (isActive ? styles.active + " " : "") + styles["nav-link"]
+          }
+        >
           Accueil
-        </a>
-        <a href={"/a-propos"} className={styles["nav-link"]}>
+        </NavLink>
+        <NavLink
+          to={"/a-propos"}
+          className={({ isActive }) =>
+            (isActive ? styles.active + " " : "") + styles["nav-link"]
+          }
+        >
           A Propos
-        </a>
+        </NavLink>
       </nav>
     </header>
   );
