@@ -21,7 +21,12 @@ function Home() {
         />
         <section id={styles["locations"]} className={"d-grid"}>
           {locations.map((data, i) => (
-            <Thumb img={data["cover"]} title={data["title"]} key={i} />
+            <Thumb
+              link={"/logement/" + data.id}
+              img={data["cover"]}
+              title={data["title"]}
+              key={i}
+            />
           ))}
         </section>
       </div>

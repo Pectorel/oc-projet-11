@@ -1,6 +1,10 @@
 import styles from "../assets/style/error-page.module.css";
+//import { useRouteError } from "react-router-dom";
 
 function ErrorPage() {
+  /*const error = useRouteError();
+  console.error(error);*/
+
   return (
     <>
       <section
