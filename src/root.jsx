@@ -9,7 +9,7 @@ function Root() {
     return <Navigate to="/home" replace />;
   }
 
-  // Else return the layout of the webpages
+  // Else return the current layout
   return (
     <>
       <Header />

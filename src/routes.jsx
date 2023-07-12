@@ -13,6 +13,12 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />,
         index: true,
+        loader: async () => {
+          const res = await fetch("./data/data.json");
+          const data = await res.json();
+          console.log(data);
+          return data;
+        },
       },
       {
         path: "logement/:logementId",

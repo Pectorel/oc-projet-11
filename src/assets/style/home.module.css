@@ -1,4 +1,4 @@
-#locations{
+#locations {
     margin: 2.75rem 0 4rem;
     padding: 3.5em 3.125em;
     flex-wrap: wrap;
@@ -8,6 +8,11 @@
     row-gap: 3.5rem;
 }
 
-#locations > *{
+#locations > * {
+    flex-basis: 30%;
+}
+
+#locations::after {
+    content: "";
     flex-basis: 30%;
 }
