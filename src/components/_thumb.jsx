@@ -7,8 +7,8 @@ Thumb.propTypes = {
   img: PropTypes.string.isRequired,
 };
 
-Thumb.propDefault = {
-  link: "",
+Thumb.defaultProps = {
+  link: "#",
 };
 
 function Thumb(props) {
