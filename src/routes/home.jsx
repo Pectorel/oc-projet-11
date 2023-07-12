@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import Banner from "../components/_banner";
 import img from "../assets/img/home-cover.jpg";
 import Thumb from "../components/_thumb";
@@ -21,12 +21,9 @@ function Home() {
         />
         <section id={styles["locations"]} className={"d-grid"}>
           {locations.map((data, i) => (
-            <Thumb
-              link={"/logement/" + data.id}
-              img={data["cover"]}
-              title={data["title"]}
-              key={i}
-            />
+            <NavLink to={"/logement/" + data.id} key={i}>
+              <Thumb img={data["cover"]} title={data["title"]} />
+            </NavLink>
           ))}
         </section>
       </div>
