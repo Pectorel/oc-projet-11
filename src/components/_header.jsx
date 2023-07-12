@@ -9,7 +9,7 @@ function Header() {
       className={"wrapper d-flex " + styles["d-flex"]}
     >
       <h1>
-        <a href={"/"}>
+        <a href={"/home"}>
           <img
             src={logo}
             alt="Kasa Logo Header"
@@ -19,7 +19,7 @@ function Header() {
       </h1>
       <nav>
         <NavLink
-          to={"/"}
+          to={"/home"}
           className={({ isActive }) =>
             (isActive ? styles.active + " " : "") + styles["nav-link"]
           }
