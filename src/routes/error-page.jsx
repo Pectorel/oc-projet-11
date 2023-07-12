@@ -1,4 +1,5 @@
 import styles from "../assets/style/error-page.module.css";
+import { NavLink } from "react-router-dom";
 //import { useRouteError } from "react-router-dom";
 
 function ErrorPage() {
@@ -15,9 +16,9 @@ function ErrorPage() {
         <p className={styles.text}>
           Oups ! La page que vous demandez n&apos;existe pas.
         </p>
-        <a className={styles.link} href="/">
+        <NavLink to={"/home"} className={styles.link}>
           Retourner sur la page d&apos;accueil
-        </a>
+        </NavLink>
       </section>
     </>
   );

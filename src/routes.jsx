@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./routes/error-page";
 import Home from "./routes/home";
 import Root from "./root";
+import Location from "./routes/location";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "logement/:logementId",
-        element: <div>Page Logement</div>,
+        element: <Location />,
       },
       {
         path: "a-propos",

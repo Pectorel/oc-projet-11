@@ -9,13 +9,13 @@ function Header() {
       className={"wrapper d-flex " + styles["d-flex"]}
     >
       <h1>
-        <a href={"/home"}>
+        <NavLink to={"/home"}>
           <img
             src={logo}
             alt="Kasa Logo Header"
             className={styles["header-logo"]}
           />
-        </a>
+        </NavLink>
       </h1>
       <nav>
         <NavLink
