@@ -16,7 +16,6 @@ const router = createBrowserRouter([
         loader: async () => {
           const res = await fetch("./data/data.json");
           const data = await res.json();
-          console.log(data);
           return data;
         },
       },

@@ -1,18 +1,33 @@
 #locations {
     margin: 2.75rem 0 4rem;
     padding: 3.5em 3.125em;
-    flex-wrap: wrap;
-    justify-content: space-between;
     background: #f6f6f6;
     border-radius: 25px;
-    row-gap: 3.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5%;
+    row-gap: 3.125rem;
 }
 
-#locations > * {
-    flex-basis: 30%;
+@media screen and (width <= 64rem) {
+    #locations {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
-#locations::after {
-    content: "";
-    flex-basis: 30%;
+@media screen and (width <= 48rem) {
+    #locations {
+        padding: 2rem;
+        row-gap: 2rem;
+    }
+
+}
+
+@media screen and (width <= 33.75rem) {
+    #locations {
+        grid-template-columns: 1fr;
+        padding: 0;
+        background: transparent;
+        row-gap: 1.25rem;
+    }
 }

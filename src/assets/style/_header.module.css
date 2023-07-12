@@ -27,3 +27,32 @@
 .nav-link.active, .nav-link:hover {
     text-decoration: underline;
 }
+
+@media screen and (width <= 48rem) {
+    .header-logo{
+        max-width: 180px;
+        width: 30vw;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    .nav-link:not(:last-child) {
+        margin-right: 2.5rem;
+    }
+
+
+}
+
+@media screen and (width <= 30rem) {
+    .nav-link {
+        font-size: 0.75rem;
+    }
+
+    .nav-link:not(:last-child) {
+        margin-right: 0.75rem;
+    }
+
+}

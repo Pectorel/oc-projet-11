@@ -5,15 +5,23 @@ import Thumb from "../components/_thumb";
 import styles from "../assets/style/home.module.css";
 
 function Home() {
+  // Getting data loaded in route loader
   const locations = useLoaderData();
 
   return (
     <>
       <div className="wrapper">
-        <Banner img={img} title={"Chez vous, partout et ailleurs"} />
-        <section id={styles["locations"]} className={"d-flex"}>
+        <Banner
+          img={img}
+          title={[
+            "Chez vous, ",
+            <br className={"small-down"} key={0} />,
+            "partout et ailleurs",
+          ]}
+        />
+        <section id={styles["locations"]} className={"d-grid"}>
           {locations.map((data, i) => (
-            <Thumb img={data.cover} title={data.title} key={i} />
+            <Thumb img={data["cover"]} title={data["title"]} key={i} />
           ))}
         </section>
       </div>

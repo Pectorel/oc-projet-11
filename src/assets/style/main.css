@@ -8,11 +8,20 @@
 /* Root settings */
 :root {
     /* Custom Properties */
+
+        /* Colors */
     --color-bg-primary: #fff;
     --color-bg-secondary: #ff6060;
     --color-txt-primary: var(--color-bg-secondary);
     --color-txt-secondary: var(--color-bg-primary);
 
+        /* Breakpoints */
+    --breakpoint-large: 80rem;
+    --breakpoint-medium: 48rem;
+    --breakpoint-small: 40rem;
+    --breakpoint-very-small: 30rem;
+
+    
     /* Font */
     font-family: Montserrat, sans-serif;
     font-weight: 500;
@@ -25,6 +34,9 @@
 
     /* Background */
     background: var(--color-bg-primary);
+    
+    
+    
 
 }
 
@@ -38,10 +50,19 @@
 }
 
 /* Wrapper */
-.wrapper{
+.wrapper {
     display: block;
     width: 1240px;
     margin: auto;
+    box-sizing: border-box;
+}
+
+@media screen and (width <= 80rem) {
+    .wrapper {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
 }
 
 /* Display Utilities */
@@ -53,8 +74,59 @@
     display: inline-block;
 }
 
-.d-flex{
+.d-flex {
     display: flex;
 }
+
+.d-grid {
+    display: grid;
+}
+
+@media screen and (width < 80rem){
+    .large-only{
+        display: none;
+    }
+}
+
+.medium-only{
+    display: none;
+}
+
+@media screen and (width > 48rem) and (width <= 80rem){
+    .medium-only{
+        display: block;
+    }
+}
+
+.medium-down{
+    display: none;
+}
+
+@media screen and (width <= 80rem){
+    .medium-down{
+        display: block;
+    }
+}
+
+.small-down{
+    display: none;
+}
+
+@media screen and (width <= 48rem){
+    .small-down{
+        display: block;
+    }
+}
+
+.very-small-only{
+    display: none;
+}
+
+@media screen and (width <= 40rem){
+    .very-small-only{
+        display: block;
+    }
+}
+
 
 

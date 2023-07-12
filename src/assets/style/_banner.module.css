@@ -23,4 +23,17 @@
     font-weight: 500;
     position: relative;
     z-index: 4;
+    padding: 0 1rem;
+}
+
+@media screen and (width <= 48rem) {
+    .banner {
+        padding: 2rem 0;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
 }

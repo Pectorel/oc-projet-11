@@ -3,7 +3,7 @@ import styles from "../assets/style/_banner.module.css";
 
 Banner.propTypes = {
   img: PropTypes.string.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 
 function Banner(props) {

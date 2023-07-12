@@ -14,3 +14,17 @@
 .logo{
     max-width: 122px;
 }
+
+@media screen and (width <= 40rem) {
+    #page-footer{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (width <= 30rem) {
+    #page-footer{
+        font-size: .75rem;
+    }
+
+}

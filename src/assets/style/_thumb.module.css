@@ -15,7 +15,7 @@
     z-index: 2;
     inset: 0;
     background: rgb(0 0 0 / 40%);
-    background: linear-gradient(180deg, rgb(255 255 255 / 10.1%) 0%, rgb(0 0 0 / 29.7%) 50%);
+    background: linear-gradient(180deg, rgb(255 255 255 / 10%) 0%, rgb(0 0 0 / 50%) 55%);
 }
 
 .thumb::after{
@@ -30,4 +30,18 @@
     bottom: 1.25rem;
     right: 1.25rem;
     z-index: 4;
+}
+
+@media screen and (width <= 48rem) {
+    .title{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (width <= 33.75rem) {
+    .thumb::after{
+        padding-bottom: 76%;
+    }
+
 }
