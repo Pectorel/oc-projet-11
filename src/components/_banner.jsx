@@ -7,18 +7,14 @@ Banner.propTypes = {
 };
 
 function Banner(props) {
-  if (props.title) {
-    return (
-      <section
-        className={styles.banner}
-        style={{ backgroundImage: `url(${props.img}` }}
-      >
-        <h2 className={styles.title}>{props.title}</h2>
-      </section>
-    );
-  }
-
-  return <section style={{ backgroundImage: `url(${props.img}` }}></section>;
+  return (
+    <section
+      className={styles.banner}
+      style={{ backgroundImage: `url(${props.img}` }}
+    >
+      {props.title ? <h2 className={styles.title}>{props.title}</h2> : ""}
+    </section>
+  );
 }
 
 export default Banner;
