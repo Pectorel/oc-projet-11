@@ -1,3 +1,4 @@
+/* Default */
 .banner {
     background: transparent no-repeat center center;
     background-size: cover;
@@ -16,7 +17,6 @@
     background: rgb(0 0 0 / 30%);
 }
 
-
 .title {
     text-align: center;
     font-size: 3rem;
@@ -26,6 +26,8 @@
     padding: 0 1rem;
 }
 
+
+/* Responsive */
 @media screen and (width <= 48rem) {
     .banner {
         padding: 2rem 0;

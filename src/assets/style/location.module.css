@@ -1,0 +1,19 @@
+#page-root {
+    margin-top: 1.25rem;
+
+}
+
+.banner {
+    padding: 0;
+    position: relative;
+}
+
+.banner::before {
+    content: "";
+    display: block;
+    padding-bottom: 33.5%;
+}
+
+.banner::after {
+    content: none;
+}

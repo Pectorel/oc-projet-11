@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <>
-      <div className="wrapper">
+      <div id={styles["page-root"]} className="wrapper">
         <Banner
           img={img}
           title={[
