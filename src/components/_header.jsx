@@ -1,6 +1,6 @@
 import logo from "../assets/img/logo.svg";
 import styles from "../assets/style/_header.module.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -9,17 +9,17 @@ function Header() {
       className={"wrapper d-flex " + styles["d-flex"]}
     >
       <h1>
-        <NavLink to={"/home"}>
+        <Link to={"/"}>
           <img
             src={logo}
             alt="Kasa Logo Header"
             className={styles["header-logo"]}
           />
-        </NavLink>
+        </Link>
       </h1>
       <nav>
         <NavLink
-          to={"/home"}
+          to={"/"}
           className={({ isActive }) =>
             (isActive ? styles.active + " " : "") + styles["nav-link"]
           }
@@ -27,7 +27,7 @@ function Header() {
           Accueil
         </NavLink>
         <NavLink
-          to={"/a-propos"}
+          to={"/about"}
           className={({ isActive }) =>
             (isActive ? styles.active + " " : "") + styles["nav-link"]
           }

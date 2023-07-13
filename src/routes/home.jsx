@@ -21,7 +21,7 @@ function Home() {
         />
         <section id={styles["locations"]} className={"d-grid"}>
           {locations.map((data, i) => (
-            <NavLink to={"/logement/" + data.id} key={i}>
+            <NavLink to={"/location/" + data.id} key={i}>
               <Thumb img={data["cover"]} title={data["title"]} />
             </NavLink>
           ))}

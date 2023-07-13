@@ -11,21 +11,19 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/home",
         element: <Home />,
         index: true,
         loader: async () => {
           const res = await fetch("/data/data.json");
-          const data = await res.json();
-          return data;
+          return await res.json();
         },
       },
       {
-        path: "logement/:logementId",
+        path: "/location/:locationId",
         element: <Location />,
       },
       {
-        path: "a-propos",
+        path: "/about",
         element: <div>Page A Propos</div>,
       },
     ],
