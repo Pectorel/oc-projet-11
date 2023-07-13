@@ -17,3 +17,35 @@
 .banner::after {
     content: none;
 }
+
+#header-details {
+    margin-top: 1.875rem;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.title {
+    font-size: 2.25rem;
+    margin-bottom: .2rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+}
+
+#host-details{
+    align-items: center;
+
+}
+
+.host-name {
+    text-align: right;
+    margin-right: .625rem;
+    font-size: 1.125rem;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 64px;
+    height: auto;
+}

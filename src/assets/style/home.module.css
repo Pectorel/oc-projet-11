@@ -1,9 +1,9 @@
 #page-root {
-    margin-top: 4em;
+    margin: 4em auto;
 }
 
 #locations {
-    margin: 2.75rem 0 4rem;
+    margin-top: 2.75rem;
     padding: 3.5em 3.125em;
     background: #f6f6f6;
     border-radius: 25px;
