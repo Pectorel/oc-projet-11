@@ -1,22 +1,25 @@
 import logo from "../assets/img/logo.svg";
 import styles from "../assets/style/_header.module.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useMatches } from "react-router-dom";
 
 function Header() {
+  /* If homepage, then logo is H1, otherwise it is simply A tag */
+  const matches = useMatches().at(-1);
+  let $logo = (
+    <Link to={"/"}>
+      <img src={logo} alt="Kasa - Accueil" className={styles["header-logo"]} />
+    </Link>
+  );
+  if (matches.pathname === "/") {
+    $logo = <h1>{$logo}</h1>;
+  }
+
   return (
     <header
       id={styles["page-header"]}
       className={"wrapper d-flex " + styles["d-flex"]}
     >
-      <h1>
-        <Link to={"/"}>
-          <img
-            src={logo}
-            alt="Kasa Logo Header"
-            className={styles["header-logo"]}
-          />
-        </Link>
-      </h1>
+      {$logo}
       <nav>
         <NavLink
           to={"/"}
