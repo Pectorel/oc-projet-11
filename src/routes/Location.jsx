@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import { useLoaderData } from "react-router-dom";
 import styles from "../assets/style/location.module.css";
+import Tag from "../components/Tag";
 
 /*
  * TODO : Change Banner Component for Carousel
@@ -36,6 +37,11 @@ function Location() {
                 alt={location["host"]["name"]}
               />
             </div>
+          </div>
+          <div className="d-flex">
+            {location["tags"].map((tag, i) => (
+              <Tag tagText={tag} key={i} />
+            ))}
           </div>
         </header>
       </section>
