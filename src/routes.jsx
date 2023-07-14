@@ -1,8 +1,8 @@
 import { createBrowserRouter, json } from "react-router-dom";
-import ErrorPage from "./routes/error-page";
-import Home from "./routes/home";
+import ErrorPage from "./routes/ErrorPage";
+import Home from "./routes/Home";
 import Root from "./root";
-import Location from "./routes/location";
+import Location from "./routes/Location";
 import loaderUtilities from "./libraries/loader-utilities";
 
 const router = createBrowserRouter([

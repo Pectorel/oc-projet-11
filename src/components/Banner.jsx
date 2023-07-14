@@ -5,8 +5,8 @@ Banner.propTypes = {
   rootTag: PropTypes.oneOf(["section", "header", "div", "article", "footer"]),
   img: PropTypes.string.isRequired,
   titleTag: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-  className: PropTypes.string,
+  bannerTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  classes: PropTypes.string,
 };
 
 Banner.defaultProps = {
@@ -20,13 +20,11 @@ function Banner(props) {
   return (
     <>
       <RootTag
-        className={
-          styles.banner + (props.className ? " " + props.className : "")
-        }
+        className={styles.banner + (props.classes ? " " + props.classes : "")}
         style={{ backgroundImage: `url(${props.img}` }}
       >
-        {props.title ? (
-          <TitleTag className={styles.title}>{props.title}</TitleTag>
+        {props.bannerTitle ? (
+          <TitleTag className={styles.title}>{props.bannerTitle}</TitleTag>
         ) : (
           ""
         )}

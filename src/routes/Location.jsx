@@ -1,4 +1,4 @@
-import Banner from "../components/_banner";
+import Banner from "../components/Banner";
 import { useLoaderData } from "react-router-dom";
 import styles from "../assets/style/location.module.css";
 
@@ -17,7 +17,7 @@ function Location() {
           <Banner
             rootTag={"div"}
             img={location["cover"]}
-            className={styles["banner"]}
+            classes={styles["banner"]}
           ></Banner>
           <div id={styles["header-details"]} className={"d-flex"}>
             <div>
