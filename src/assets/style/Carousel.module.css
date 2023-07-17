@@ -2,7 +2,6 @@
     width: 100%;
     height: auto;
     background: #fff;
-    cursor: pointer;
     overflow: hidden;
     position: relative;
 }
@@ -24,6 +23,7 @@
     z-index: 2;
     opacity: 0;
     transition: opacity .2s ease-in;
+    cursor: pointer;
 }
 
 .arrow{
@@ -42,13 +42,13 @@
     transform: rotateZ(180deg);
 }
 
-.arrow.next{}
-
 .slides-container{
     position: absolute;
     width: auto;
     height: 100%;
     display: flex;
+    left: 0;
+    transition: left .4s ease-in-out;
 }
 
 .slide{
