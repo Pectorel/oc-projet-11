@@ -83,6 +83,9 @@ function Carousel(props) {
           <Slide img={data} width={`${width}px`} key={i} />
         ))}
       </div>
+      <span className={styles["slide-index"]}>
+        {currentSlide + 1} / {props.imgs.length}
+      </span>
     </section>
   );
 }

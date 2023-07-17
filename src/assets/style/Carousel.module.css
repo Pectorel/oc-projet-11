@@ -23,7 +23,7 @@
     z-index: 2;
     opacity: 0;
     transition: opacity .2s ease-in;
-    cursor: pointer;
+    animation: opacity-flash .8s ease-out 2;
 }
 
 .arrow{
@@ -31,6 +31,7 @@
     width: 8%;
     background: rgba(0 0 0 / 20%) url("../img/arrow.svg") no-repeat center center;
     background-size: 50%;
+    cursor: pointer;
 
 }
 
@@ -55,4 +56,28 @@
     background: transparent no-repeat center center;
     background-size: cover;
     height: 100%;
+}
+
+.slide-index{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 4;
+    color: #fff;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+@keyframes opacity-flash {
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
 }
