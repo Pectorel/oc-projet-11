@@ -3,21 +3,6 @@
 
 }
 
-.banner {
-    padding: 0;
-    position: relative;
-}
-
-.banner::before {
-    content: "";
-    display: block;
-    padding-bottom: 33.5%;
-}
-
-.banner::after {
-    content: none;
-}
-
 #header-details {
     margin-top: 1.875rem;
     justify-content: space-between;

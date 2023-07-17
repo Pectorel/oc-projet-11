@@ -1,7 +1,7 @@
-import Banner from "../components/Banner";
 import { useLoaderData } from "react-router-dom";
 import styles from "../assets/style/Location.module.css";
 import Tag from "../components/Tag";
+import Carousel from "../components/Carousel";
 
 /*
  * TODO : Change Banner Component for Carousel
@@ -15,11 +15,7 @@ function Location() {
     <>
       <section id={`${styles["page-root"]}`} className="wrapper">
         <header>
-          <Banner
-            rootTag={"div"}
-            img={location["cover"]}
-            classes={styles["banner"]}
-          ></Banner>
+          <Carousel imgs={location["pictures"]} />
           <div id={styles["header-details"]} className={"d-flex"}>
             <div>
               <h1 className={styles["title"]}>{location["title"]}</h1>

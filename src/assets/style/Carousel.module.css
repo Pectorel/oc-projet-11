@@ -1,0 +1,58 @@
+.carousel{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel::after{
+    content: "";
+    display: block;
+    padding-bottom: 33.5%;
+}
+
+.arrows-container{
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+}
+
+.arrow{
+    height: 100%;
+    width: 8%;
+    background: rgba(0 0 0 / 20%) url("../img/arrow.svg") no-repeat center center;
+    background-size: 50%;
+
+}
+
+.carousel:hover .arrows-container{
+    opacity: 1;
+}
+
+.arrow.previous{
+    transform: rotateZ(180deg);
+}
+
+.arrow.next{}
+
+.slides-container{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    background: transparent no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
