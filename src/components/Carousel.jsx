@@ -32,8 +32,6 @@ function Carousel(props) {
   });
   // Current Slide State
   const [currentSlide, setCurrentSlide] = useState(() => 0);
-  // CurrentSlide Ref
-  //const slideIndexRef = useRef(0);
   //SliderContainer Ref
   const sliderRef = useRef(null);
 
