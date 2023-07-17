@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "../assets/style/_banner.module.css";
+import styles from "../assets/style/Banner.module.css";
 
 Banner.propTypes = {
   rootTag: PropTypes.oneOf(["section", "header", "div", "article", "footer"]),

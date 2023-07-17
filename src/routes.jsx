@@ -1,14 +1,14 @@
 import { createBrowserRouter, json } from "react-router-dom";
 import ErrorPage from "./routes/ErrorPage";
 import Home from "./routes/Home";
-import Root from "./root";
+import App from "./App";
 import Location from "./routes/Location";
-import loaderUtilities from "./libraries/loader-utilities";
+import loaderUtilities from "./utils/loader-utilities";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {

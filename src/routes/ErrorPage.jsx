@@ -1,4 +1,4 @@
-import styles from "../assets/style/error-page.module.css";
+import styles from "../assets/style/ErrorPage.module.css";
 import { Link } from "react-router-dom";
 import { useRouteError } from "react-router-dom";
 import Header from "../components/Header";

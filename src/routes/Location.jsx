@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import { useLoaderData } from "react-router-dom";
-import styles from "../assets/style/location.module.css";
+import styles from "../assets/style/Location.module.css";
 import Tag from "../components/Tag";
 
 /*

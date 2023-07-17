@@ -2,7 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import img from "../assets/img/home-cover.jpg";
 import Thumb from "../components/Thumb";
-import styles from "../assets/style/home.module.css";
+import styles from "../assets/style/Home.module.css";
 
 function Home() {
   // Getting data loaded in route loader
