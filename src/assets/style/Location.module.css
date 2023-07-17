@@ -3,6 +3,10 @@
 
 }
 
+#page-root > header{
+    margin-bottom: 1.25rem;
+}
+
 #header-details {
     margin-top: 1.875rem;
     justify-content: space-between;
@@ -33,4 +37,9 @@
     border-radius: 50%;
     width: 64px;
     height: auto;
+}
+
+#tags-container{
+    gap: .625rem;
+
 }

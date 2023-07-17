@@ -34,12 +34,15 @@ function Location() {
               />
             </div>
           </div>
-          <div className="d-flex">
+        </header>
+        <div id={styles["secondary-details"]} className="d-flex">
+          <div id={styles["tags-container"]} className="d-flex">
             {location["tags"].map((tag, i) => (
               <Tag tagText={tag} key={i} />
             ))}
           </div>
-        </header>
+          <div id={styles["rating"]} className={"d-flex"}></div>
+        </div>
       </section>
     </>
   );
