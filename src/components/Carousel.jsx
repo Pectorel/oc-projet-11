@@ -90,7 +90,7 @@ function Carousel(props) {
 
       return () => clearInterval(autoplay);
     }
-  }, [pauseAutoplay]);
+  }, [pauseAutoplay]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <section className={styles.carousel} ref={ref}>
