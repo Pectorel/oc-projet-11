@@ -48,12 +48,28 @@ function Carousel(props) {
     setCurrentSlide((prevCurrent) =>
       prevCurrent === props.imgs.length - 1 ? 0 : prevCurrent + 1,
     );
+
+    // Pause the Autoplay from triggering when already switching slide
+    if (props.autoplay) {
+      setPauseAutoplay(true);
+      setTimeout(() => {
+        setPauseAutoplay(false);
+      }, 600);
+    }
   };
 
   const prevSlide = () => {
     setCurrentSlide((prevCurrent) =>
       prevCurrent === 0 ? props.imgs.length - 1 : prevCurrent - 1,
     );
+
+    // Pause the Autoplay from triggering when already switching slide
+    if (props.autoplay) {
+      setPauseAutoplay(true);
+      setTimeout(() => {
+        setPauseAutoplay(false);
+      }, 600);
+    }
   };
 
   useEffect(() => {
@@ -67,10 +83,21 @@ function Carousel(props) {
   useEffect(() => {
     // We first set the width at page startup and then on Window Resize
     setWidth(ref.current.offsetWidth);
-    window.addEventListener("resize", () => {
-      setWidth(ref.current.offsetWidth);
-    });
-  }, []);
+    window.addEventListener("resize", changeWidth);
+    document.addEventListener("keydown", keyboardHandler);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const changeWidth = () => {
+    setWidth(ref.current.offsetWidth);
+  };
+
+  const keyboardHandler = (event) => {
+    if (event.key === "ArrowLeft") {
+      prevSlide();
+    } else if (event.key === "ArrowRight") {
+      nextSlide();
+    }
+  };
 
   useEffect(() => {
     if (props.autoplay) {
@@ -88,12 +115,15 @@ function Carousel(props) {
         }
       }, props.autoplayTime);
 
-      return () => clearInterval(autoplay);
+      // Cleanup function on re-render
+      return () => {
+        clearInterval(autoplay);
+      };
     }
   }, [pauseAutoplay]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <section className={styles.carousel} ref={ref}>
+    <section className={styles.carousel} ref={ref} onKeyDown={keyboardHandler}>
       {props.imgs.length > 1 ? (
         <div className={styles["arrows-container"]}>
           <div
