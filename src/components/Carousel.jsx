@@ -95,6 +95,11 @@ function Carousel(props) {
     setWidth(ref.current.offsetWidth);
     window.addEventListener("resize", changeWidth);
     document.addEventListener("keydown", keyboardHandler);
+
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+      document.removeEventListener("keydown", keyboardHandler);
+    };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const changeWidth = () => {
