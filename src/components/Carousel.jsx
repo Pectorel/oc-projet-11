@@ -51,10 +51,15 @@ function Carousel(props) {
 
     // Pause the Autoplay from triggering when already switching slide
     if (props.autoplay) {
-      setPauseAutoplay(true);
-      setTimeout(() => {
-        setPauseAutoplay(false);
-      }, 600);
+      setPauseAutoplay((prevState) => {
+        if (!prevState) {
+          setTimeout(() => {
+            setPauseAutoplay(false);
+          }, 600);
+        }
+
+        return true;
+      });
     }
   };
 
@@ -65,10 +70,15 @@ function Carousel(props) {
 
     // Pause the Autoplay from triggering when already switching slide
     if (props.autoplay) {
-      setPauseAutoplay(true);
-      setTimeout(() => {
-        setPauseAutoplay(false);
-      }, 600);
+      setPauseAutoplay((prevState) => {
+        if (!prevState) {
+          setTimeout(() => {
+            setPauseAutoplay(false);
+          }, 600);
+        }
+
+        return true;
+      });
     }
   };
 
