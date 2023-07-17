@@ -21,14 +21,6 @@ function Slide(props) {
 // We set the imgs the Crousel should show and if it autoplays
 Carousel.propTypes = {
   imgs: PropTypes.array.isRequired,
-  autoplay: PropTypes.bool,
-  autoplayTime: PropTypes.number,
-};
-
-// By default autoplay is true
-Carousel.defaultProps = {
-  autoplay: true,
-  autoplayTime: 5000,
 };
 
 function Carousel(props) {
@@ -51,10 +43,6 @@ function Carousel(props) {
     window.addEventListener("resize", () => {
       setWidth(ref.current.offsetWidth);
     });
-
-    if (props.autoplay) {
-      console.log("autoplay");
-    }
   }, []);
 
   const nextSlide = () => {
@@ -74,8 +62,7 @@ function Carousel(props) {
   }, [currentSlide, width]);
 
   const switchSlide = (index) => {
-    let offset = -(index * ref.current.offsetWidth) + "px";
-    sliderRef.current.style.left = offset;
+    sliderRef.current.style.left = -(index * ref.current.offsetWidth) + "px";
   };
 
   return (
