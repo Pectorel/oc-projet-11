@@ -4,6 +4,7 @@
     background: #fff;
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
 }
 
 .carousel::after{
