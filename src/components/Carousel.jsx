@@ -21,6 +21,13 @@ function Slide(props) {
 // We set the imgs the Crousel should show and if it autoplays
 Carousel.propTypes = {
   imgs: PropTypes.array.isRequired,
+  autoplay: PropTypes.bool,
+  autoplayTime: PropTypes.number,
+};
+
+Carousel.defaultProps = {
+  autoplay: true,
+  autoplayTime: 5000,
 };
 
 function Carousel(props) {
@@ -34,14 +41,8 @@ function Carousel(props) {
   const [currentSlide, setCurrentSlide] = useState(() => 0);
   //SliderContainer Ref
   const sliderRef = useRef(null);
-
-  useEffect(() => {
-    // We first set the width at page startup and then on Window Resize
-    setWidth(ref.current.offsetWidth);
-    window.addEventListener("resize", () => {
-      setWidth(ref.current.offsetWidth);
-    });
-  }, []);
+  // MouseOverState
+  const [pauseAutoplay, setPauseAutoplay] = useState(false);
 
   const nextSlide = () => {
     setCurrentSlide((prevCurrent) =>
@@ -62,6 +63,34 @@ function Carousel(props) {
   const switchSlide = (index) => {
     sliderRef.current.style.left = -(index * ref.current.offsetWidth) + "px";
   };
+
+  useEffect(() => {
+    // We first set the width at page startup and then on Window Resize
+    setWidth(ref.current.offsetWidth);
+    window.addEventListener("resize", () => {
+      setWidth(ref.current.offsetWidth);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (props.autoplay) {
+      ref.current.addEventListener("mouseenter", () => {
+        setPauseAutoplay(true);
+      });
+
+      ref.current.addEventListener("mouseleave", () => {
+        setPauseAutoplay(false);
+      });
+
+      const autoplay = setInterval(() => {
+        if (!pauseAutoplay) {
+          nextSlide();
+        }
+      }, props.autoplayTime);
+
+      return () => clearInterval(autoplay);
+    }
+  }, [pauseAutoplay]);
 
   return (
     <section className={styles.carousel} ref={ref}>
