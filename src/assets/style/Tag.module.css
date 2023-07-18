@@ -1,10 +1,11 @@
 .tag {
     box-sizing: border-box;
-    padding: .22rem 1rem;
+    padding: .28rem 1.6rem .2rem;
     background: var(--color-bg-secondary);
     border-radius: 10px;
     font-size: .875rem;
     color: var(--color-txt-secondary);
     min-width: 115px;
+    min-height: 25px;
     text-align: center;
 }

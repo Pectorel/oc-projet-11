@@ -3,14 +3,15 @@
 
 }
 
-#page-root > header{
-    margin-bottom: 1.25rem;
-}
-
-#header-details {
+#location-details {
     margin-top: 1.875rem;
     justify-content: space-between;
-    align-items: start;
+    align-items: stretch;
+}
+
+#location-details header{
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .title {
@@ -22,9 +23,20 @@
     font-size: 1.125rem;
 }
 
+#tags-container{
+    margin-top: 1.25rem;
+    gap: .625rem;
+}
+
+#secondary-details{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
 #host-details{
     align-items: center;
-
 }
 
 .host-name {
@@ -37,9 +49,4 @@
     border-radius: 50%;
     width: 64px;
     height: auto;
-}
-
-#tags-container{
-    gap: .625rem;
-
 }
