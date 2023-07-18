@@ -1,10 +1,15 @@
+:root{
+    --thumb-bg-color: var(--color-bg-secondary);
+    --thumb-txt-color: var(--color-txt-secondary);
+}
+
 .thumb{
     border-radius: 10px;
-    background: var(--color-bg-secondary) no-repeat center center;
+    background: var(--thumb-bg-color) no-repeat center center;
     background-size: cover;
     font-size: 1.125rem;
     position: relative;
-    color: var(--color-txt-secondary);
+    color: var(--thumb-txt-color);
     z-index: 1;
     overflow: hidden;
 }

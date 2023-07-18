@@ -1,15 +1,15 @@
 :root {
-    --bg-color: #f6f6f6;
-    --header-bg-color: var(--color-bg-secondary);
-    --header-txt-color: var(--color-txt-secondary);
-    --transition-duration: .2s;
+    --collapse-bg-color: #f6f6f6;
+    --collapse-header-bg-color: var(--color-bg-secondary);
+    --collapse-header-txt-color: var(--color-txt-secondary);
+    --collapse-transition-duration: .2s;
 }
 
 .collapse {
     border-radius: 10px;
     box-sizing: border-box;
     background-color: transparent;
-    transition: background-color 0s var(--transition-duration);
+    transition: background-color 0s var(--collapse-transition-duration);
 }
 
 .collapse.open {
@@ -19,8 +19,8 @@
 
 .collapse header {
     border-radius: 10px;
-    background: var(--header-bg-color);
-    color: var(--header-txt-color);
+    background: var(--collapse-header-bg-color);
+    color: var(--collapse-header-txt-color);
     padding: .875rem 1.25rem;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +33,7 @@
     overflow: hidden;
     height: 0;
     box-sizing: border-box;
-    transition: height var(--transition-duration) ease-out;
+    transition: height var(--collapse-transition-duration) ease-out;
 }
 
 .content > * {

@@ -1,10 +1,15 @@
+:root{
+    --tag-bg-color: var(--color-bg-secondary);
+    --tag-txt-color: var(--color-txt-secondary);
+}
+
 .tag {
     box-sizing: border-box;
     padding: .28rem 1.6rem .2rem;
-    background: var(--color-bg-secondary);
+    background: var(--tag-bg-color);
     border-radius: 10px;
     font-size: .875rem;
-    color: var(--color-txt-secondary);
+    color: var(--tag-txt-color);
     min-width: 115px;
     min-height: 25px;
     text-align: center;

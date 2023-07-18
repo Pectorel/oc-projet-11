@@ -7,22 +7,15 @@
 
 /* App settings */
 :root {
-    /* Custom Properties */
+    /* === Global Custom Properties */
 
         /* Colors */
     --color-bg-primary: #fff;
     --color-bg-secondary: #ff6060;
     --color-txt-primary: var(--color-bg-secondary);
     --color-txt-secondary: var(--color-bg-primary);
-
-        /* Breakpoints */
-    --breakpoint-large: 80rem;
-    --breakpoint-medium: 48rem;
-    --breakpoint-small: 40rem;
-    --breakpoint-very-small: 30rem;
-
     
-    /* Font */
+    /* === Font */
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 1em;
@@ -32,7 +25,7 @@
     -moz-osx-font-smoothing: grayscale;
     color: var(--color-txt-primary);
 
-    /* Background */
+    /* === Background */
     background: var(--color-bg-primary);
     
     

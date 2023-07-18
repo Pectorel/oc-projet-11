@@ -1,10 +1,14 @@
+:root{
+    --banner-txt-color: var(--color-txt-secondary)
+}
+
 /* Default */
 .banner {
     background: transparent no-repeat center center;
     background-size: cover;
     border-radius: 25px;
     padding: 4.875rem 0;
-    color: var(--color-txt-secondary);
+    color: var(--banner-txt-color);
     position: relative;
     z-index: 1;
     overflow: hidden;
