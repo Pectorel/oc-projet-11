@@ -13,7 +13,7 @@
 }
 
 .collapse.open {
-    background-color: var(--bg-color);
+    background-color: var(--collapse-bg-color);
     transition: none;
 }
 
