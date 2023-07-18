@@ -62,7 +62,9 @@
 .slide-index{
     position: absolute;
     bottom: 1rem;
+    left: 1rem;
     right: 1rem;
+    text-align: center;
     z-index: 4;
     color: #fff;
     font-weight: 500;
