@@ -1,5 +1,5 @@
 #page-root {
-    margin-top: 1.25rem;
+    margin: 1.25rem auto;
 
 }
 
@@ -49,4 +49,15 @@
     border-radius: 50%;
     width: 64px;
     height: auto;
+}
+
+#collapse-container{
+    margin-top: 1.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5rem;
+}
+
+#collapse-container > *{
+    flex-basis: 50%;
 }

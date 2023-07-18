@@ -70,6 +70,7 @@
     font-weight: 500;
     pointer-events: none;
     text-shadow: 1px 1px 2px black;
+    font-size: 1.125rem;
 }
 
 @keyframes opacity-flash {

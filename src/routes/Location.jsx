@@ -3,6 +3,7 @@ import styles from "../assets/style/Location.module.css";
 import Tag from "../components/Tag";
 import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
+import Collapse from "../components/Collapse";
 
 /*
  * TODO : Change Banner Component for Carousel
@@ -16,7 +17,7 @@ function Location() {
     <>
       <section id={`${styles["page-root"]}`} className="wrapper">
         <Carousel imgs={location["pictures"]} />
-        <div id={styles["location-details"]} className="d-flex">
+        <section id={styles["location-details"]} className="d-flex">
           <header className={"d-flex"}>
             <h1 className={styles["title"]}>{location["title"]}</h1>
             <h2 className={styles["subtitle"]}>{location["location"]}</h2>
@@ -43,7 +44,17 @@ function Location() {
               <Rating rate={parseInt(location["rating"])} />
             </div>
           </div>
-        </div>
+        </section>
+        <section id={styles["collapse-container"]} className="d-flex">
+          <Collapse
+            collapseTitle={"Description"}
+            collapseContent={location["description"]}
+          />
+          <Collapse
+            collapseTitle={"Équipements"}
+            collapseContent={location["equipments"]}
+          />
+        </section>
       </section>
     </>
   );
