@@ -23,23 +23,7 @@ const router = createBrowserRouter([
         path: "/logement/:logementId",
         element: <Location />,
         loader: async ({ params }) => {
-          let row = await loaderUtilities.checkData("/data/data.json", [
-            {
-              objectField: "id",
-              paramField: params.logementId,
-            },
-          ]);
-          if (row === null) {
-            throw json(
-              {
-                errorCode: 1,
-                errorMessage:
-                  "Oups ! Le logement que vous cherchez est introuvable",
-              },
-              { status: 404 },
-            );
-          }
-          return row;
+          return await locationLoader(params);
         },
       },
       {
@@ -49,5 +33,28 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
+/* Loader Logic of the Location Page*/
+async function locationLoader(params) {
+  // We first check if the given ID is present in database
+  let row = await loaderUtilities.checkData("/data/data.json", [
+    {
+      objectField: "id",
+      paramField: params.logementId,
+    },
+  ]);
+  // If not in DB, then throw error and send to Error Page
+  if (row === null) {
+    throw json(
+      {
+        errorCode: 1,
+        errorMessage: "Oups ! Le logement que vous cherchez est introuvable",
+      },
+      { status: 404 },
+    );
+  }
+  // Return Location infos if success
+  return row;
+}
 
 export default router;
