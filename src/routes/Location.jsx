@@ -13,6 +13,21 @@ function Location() {
 
   let hostNameSplit = location["host"]["name"].split(/ (.*)/s);
 
+  const listArray = (list) => {
+    let res = <p>Error, list in not of type Array</p>;
+
+    if (Array.isArray(list)) {
+      let content = [];
+      list.map((data, i) => {
+        content.push(<li key={i}>{data}</li>);
+      });
+
+      res = <ul>{content}</ul>;
+    }
+
+    return res;
+  };
+
   return (
     <>
       <section id={`${styles["page-root"]}`} className="wrapper">
@@ -46,14 +61,12 @@ function Location() {
           </div>
         </section>
         <section id={styles["collapse-container"]} className="d-flex">
-          <Collapse
-            collapseTitle={"Description"}
-            collapseContent={location["description"]}
-          />
-          <Collapse
-            collapseTitle={"Équipements"}
-            collapseContent={location["equipments"]}
-          />
+          <Collapse collapseTitle={"Description"}>
+            <p>{location["description"]}</p>
+          </Collapse>
+          <Collapse collapseTitle={"Équipements"}>
+            {listArray(location["equipments"])}
+          </Collapse>
         </section>
       </section>
     </>

@@ -1,0 +1,8 @@
+#page-root{
+    margin-top: 2.75rem;
+}
+
+.banner{
+    min-height: 224px;
+    box-sizing: border-box;
+}

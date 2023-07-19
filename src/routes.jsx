@@ -4,6 +4,7 @@ import Home from "./routes/Home";
 import App from "./App";
 import Location from "./routes/Location";
 import loaderUtilities from "./utils/loader-utilities";
+import About from "./routes/About";
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/a-propos",
-        element: <div>Page A Propos</div>,
+        element: <About />,
       },
     ],
   },
