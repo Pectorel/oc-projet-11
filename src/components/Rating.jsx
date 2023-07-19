@@ -16,14 +16,12 @@ function Rating(props) {
       if (i < props.rate) {
         content.push(
           <span
-            className={`${styles.icon} ${styles.star} ${styles.filled}`}
+            className={`icon ${styles.star} ${styles.filled}`}
             key={i}
           ></span>,
         );
       } else {
-        content.push(
-          <span className={`${styles.icon} ${styles.star}`} key={i}></span>,
-        );
+        content.push(<span className={`icon ${styles.star}`} key={i}></span>);
       }
     }
     return content;

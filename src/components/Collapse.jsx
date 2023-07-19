@@ -44,12 +44,9 @@ function Collapse(props) {
         props.className ? ` ${props.className}` : ""
       }`}
     >
-      <header className={"d-flex"}>
+      <header className={"d-flex"} onClick={switchCollapse}>
         <h3>{props.collapseTitle}</h3>
-        <span
-          className={`${styles.icon} ${styles.chevron}`}
-          onClick={switchCollapse}
-        ></span>
+        <span className={`icon ${styles.chevron}`}></span>
       </header>
       <section className={styles.content} ref={contentRef}>
         <div ref={contentTextRef}>{props.children}</div>
