@@ -6,7 +6,7 @@ import styles from "../assets/style/About.module.css";
 function About() {
   return (
     <section id={styles["page-root"]} className={`wrapper`}>
-      <Banner img={img} classes={styles.banner} />
+      <Banner img={img} className={styles.banner} />
       <div className={styles["collapse-wrapper"]}>
         <Collapse collapseTitle={"Fiabilité"} className={styles.collapse}>
           <p>
