@@ -23,11 +23,17 @@ function Collapse(props) {
     });
   };
 
+  const changeHeight = () => {
+    setHeight(`${contentTextRef.current.offsetHeight}px`);
+  };
+
   useEffect(() => {
     setHeight(`${contentTextRef.current.offsetHeight}px`);
-    window.addEventListener("resize", () => {
-      setHeight(`${contentTextRef.current.offsetHeight}px`);
-    });
+    window.addEventListener("resize", changeHeight);
+
+    return () => {
+      window.removeEventListener("resize", changeHeight);
+    };
   }, []);
 
   useEffect(() => {
