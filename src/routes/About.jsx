@@ -5,9 +5,9 @@ import styles from "../assets/style/About.module.css";
 
 function About() {
   return (
-    <section id={styles["page-root"]} className={`wrapper`}>
-      <Banner img={img} className={styles.banner} />
-      <div className={styles["collapse-wrapper"]}>
+    <main id={styles["page-root"]} className={`wrapper`}>
+      <Banner img={img} className={styles.banner} rootTag={"div"} />
+      <section className={styles["collapse-wrapper"]}>
         <Collapse collapseTitle={"Fiabilité"} className={styles.collapse}>
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
@@ -39,8 +39,8 @@ function About() {
             également des ateliers sur la sécurité domestique pour nos hôtes.
           </p>
         </Collapse>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }
 

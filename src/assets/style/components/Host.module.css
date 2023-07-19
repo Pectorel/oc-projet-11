@@ -1,0 +1,11 @@
+.host-name {
+    text-align: right;
+    margin-right: .625rem;
+    font-size: 1.125rem;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 64px;
+    height: auto;
+}

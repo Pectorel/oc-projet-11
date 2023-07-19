@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <>
-      <div id={styles["page-root"]} className="wrapper">
+      <main id={styles["page-root"]} className="wrapper">
         <Banner
           img={img}
           bannerTitle={[
@@ -18,6 +18,7 @@ function Home() {
             <br className={"small-down"} key={0} />,
             "partout et ailleurs",
           ]}
+          rootTag={"header"}
         />
         <section id={styles["locations"]} className={"d-grid"}>
           {locations.map((data, i) => (
@@ -26,7 +27,7 @@ function Home() {
             </Link>
           ))}
         </section>
-      </div>
+      </main>
     </>
   );
 }

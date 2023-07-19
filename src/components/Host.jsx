@@ -1,4 +1,4 @@
-import styles from "../assets/style/Location.module.css";
+import styles from "../assets/style/components/Host.module.css";
 import PropTypes from "prop-types";
 
 Host.propTypes = {

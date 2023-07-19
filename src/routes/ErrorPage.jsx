@@ -10,7 +10,7 @@ function ErrorPage() {
   return (
     <>
       <Header />
-      <section
+      <main
         id={styles["error-page"]}
         className={"wrapper d-flex " + styles["d-flex"]}
       >
@@ -23,7 +23,7 @@ function ErrorPage() {
         <Link to={"/"} className={styles.link}>
           Retourner sur la page d&apos;accueil
         </Link>
-      </section>
+      </main>
       <Footer />
     </>
   );

@@ -29,7 +29,7 @@ function Location() {
 
   return (
     <>
-      <section id={`${styles["page-root"]}`} className="wrapper">
+      <main id={`${styles["page-root"]}`} className="wrapper">
         <Carousel imgs={location["pictures"]} />
         <section id={styles["location-details"]} className="d-flex">
           <header className={"d-flex"}>
@@ -61,7 +61,7 @@ function Location() {
             {listArray(location["equipments"])}
           </Collapse>
         </section>
-      </section>
+      </main>
     </>
   );
 }
