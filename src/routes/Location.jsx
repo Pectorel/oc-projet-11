@@ -4,14 +4,13 @@ import Tag from "../components/Tag";
 import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
+import Host from "../components/Host";
 
 /*
  * TODO : Change Banner Component for Carousel
  * */
 function Location() {
   const location = useLoaderData();
-
-  let hostNameSplit = location["host"]["name"].split(/ (.*)/s);
 
   const listArray = (list) => {
     let res = <p>Error, list in not of type Array</p>;
@@ -44,15 +43,9 @@ function Location() {
           </header>
           <div id={styles["secondary-details"]} className="d-flex">
             <div id={styles["host-details"]} className={"d-flex"}>
-              <p className={styles["host-name"]}>
-                {hostNameSplit[0]}
-                <br />
-                {hostNameSplit[1]}
-              </p>
-              <img
-                className={styles["profile-picture"]}
-                src={location["host"]["picture"]}
-                alt={location["host"]["name"]}
+              <Host
+                hostName={location["host"]["name"]}
+                hostPicture={location["host"]["picture"]}
               />
             </div>
             <div id={styles["rating"]} className={"d-flex"}>
