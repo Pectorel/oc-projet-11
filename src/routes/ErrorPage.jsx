@@ -11,7 +11,7 @@ function ErrorPage() {
     <>
       <Header />
       <main
-        id={styles["error-page"]}
+        id={styles["page-root"]}
         className={"wrapper d-flex " + styles["d-flex"]}
       >
         <h1 className={styles.title}>{error.status}</h1>

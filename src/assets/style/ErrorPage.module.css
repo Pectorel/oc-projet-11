@@ -1,5 +1,6 @@
-#error-page {
+#page-root {
     margin: 6rem auto;
+    text-align: center;
 }
 
 .d-flex {
@@ -15,7 +16,6 @@
 
 .text {
     font-size: 2.25rem;
-    text-align: center;
 }
 
 .link {
@@ -25,6 +25,10 @@
 
 /* Responsive */
 @media screen and (width <= 40rem) {
+    #page-root{
+        margin: 12rem auto;
+    }
+
     .title{
         font-size: 6rem;
     }
@@ -34,7 +38,6 @@
     }
 
     .link{
-        margin-top: 10rem;
         font-size: .875rem;
     }
 
