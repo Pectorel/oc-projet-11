@@ -46,7 +46,7 @@ function Collapse(props) {
     >
       <header className={"d-flex"} onClick={switchCollapse}>
         <h3>{props.collapseTitle}</h3>
-        <span className={`icon ${styles.chevron}`}></span>
+        <span className={`${styles.icon} ${styles.chevron}`}></span>
       </header>
       <section className={styles.content} ref={contentRef}>
         <div ref={contentTextRef}>{props.children}</div>
