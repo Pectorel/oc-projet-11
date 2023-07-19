@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "../assets/style/Tag.module.css";
+import styles from "../assets/style/components/Tag.module.css";
 
 Tag.propTypes = {
   tagText: PropTypes.string,

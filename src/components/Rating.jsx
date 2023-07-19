@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "../assets/style/Rating.module.css";
+import styles from "../assets/style/components/Rating.module.css";
 
 Rating.propTypes = {
   rateLimit: PropTypes.number,

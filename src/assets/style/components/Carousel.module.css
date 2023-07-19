@@ -36,7 +36,7 @@
 .arrow{
     height: 100%;
     width: 8%;
-    background: var(--carousel-arrow-bg-color) url("../img/arrow.svg") no-repeat center center;
+    background: var(--carousel-arrow-bg-color) url("../../img/arrow.svg") no-repeat center center;
     background-size: 50%;
     cursor: pointer;
 }

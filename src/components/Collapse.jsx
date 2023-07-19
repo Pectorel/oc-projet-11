@@ -1,11 +1,10 @@
-import styles from "../assets/style/Collapse.module.css";
+import styles from "../assets/style/components/Collapse.module.css";
 import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
 
 Collapse.propTypes = {
   collapseTitle: PropTypes.string.isRequired,
-  collapseContent: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
-    .isRequired,
+  children: PropTypes.element,
 };
 function Collapse(props) {
   const [open, setOpen] = useState(() => {
@@ -16,15 +15,6 @@ function Collapse(props) {
     return 0;
   });
   const contentTextRef = useRef(null);
-  const listArray = (list) => {
-    let content = [];
-
-    list.map((data, i) => {
-      content.push(<li key={i}>{data}</li>);
-    });
-
-    return <ul ref={contentTextRef}>{content}</ul>;
-  };
 
   const switchCollapse = () => {
     setOpen((prevState) => {
@@ -58,11 +48,7 @@ function Collapse(props) {
         ></span>
       </header>
       <section className={styles.content} ref={contentRef}>
-        {typeof props.collapseContent === "string" ? (
-          <p ref={contentTextRef}>{props.collapseContent}</p>
-        ) : (
-          listArray(props.collapseContent)
-        )}
+        <div ref={contentTextRef}>{props.children}</div>
       </section>
     </article>
   );

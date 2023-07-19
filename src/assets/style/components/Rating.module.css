@@ -22,9 +22,9 @@
 }
 
 .star::after {
-    background-image: url("../img/star.svg");
+    background-image: url("../../img/star.svg");
 }
 
 .star.filled::after {
-    background-image: url("../img/star-filled.svg");
+    background-image: url("../../img/star-filled.svg");
 }

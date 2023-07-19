@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "../assets/style/Thumb.module.css";
+import styles from "../assets/style/components/Thumb.module.css";
 
 Thumb.propTypes = {
   link: PropTypes.string,

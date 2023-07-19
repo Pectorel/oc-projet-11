@@ -65,7 +65,7 @@
 }
 
 .chevron::after {
-    background-image: url("../img/chevron-round.svg");
+    background-image: url("../../img/chevron-round.svg");
     cursor: pointer;
     transition: transform .2s ease-out;
 }
