@@ -6,3 +6,25 @@
     min-height: 224px;
     box-sizing: border-box;
 }
+
+.collapse-wrapper{
+    width: 80%;
+    margin: 2.125rem auto;
+}
+
+.collapse{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.collapse:not(:last-child){
+    margin-bottom: 2.125rem;
+}
+
+.collapse > header{
+    font-weight: 500;
+}
+
+.collapse > *{
+    font-size: inherit;
+}

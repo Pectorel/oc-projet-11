@@ -10,7 +10,7 @@ function Header() {
       <img src={logo} alt="Kasa - Accueil" className={styles["header-logo"]} />
     </Link>
   );
-  if (matches.pathname === "/") {
+  if (matches.pathname === "/" || matches.pathname === "/a-propos") {
     $logo = <h1>{$logo}</h1>;
   }
 
