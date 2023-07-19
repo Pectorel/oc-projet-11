@@ -8,18 +8,10 @@
     align-items: stretch;
 }
 
-@media screen and (width <= 48rem) {
-    #location-details{
-        flex-direction: column;
-        align-items: stretch;
-    }
-}
-
-#location-details header{
+#location-details header {
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 .title {
     font-size: 2.25rem;
@@ -30,26 +22,19 @@
     font-size: 1.125rem;
 }
 
-#tags-container{
+#tags-container {
     margin-top: 1.25rem;
     gap: .625rem;
 }
 
-#secondary-details{
+#secondary-details {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
     gap: 2rem;
 }
 
-@media screen and (width <= 48rem) {
-    #secondary-details{
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-}
-
-#host-details{
+#host-details {
     align-items: center;
 }
 
@@ -65,14 +50,37 @@
     height: auto;
 }
 
-#collapse-container{
+#collapse-container {
     margin-top: 1.5rem;
     justify-content: space-between;
     align-items: flex-start;
     gap: 5rem;
 }
 
-#collapse-container > *{
+#collapse-container > * {
     flex-basis: 50%;
 }
 
+/* Responsive */
+
+@media screen and (width <= 48rem) {
+    #location-details {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #secondary-details {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+
+@media screen and (width <= 40rem){
+    .title{
+        font-size: 1.125rem;
+    }
+
+    .subtitle{
+        font-size: .875rem;
+    }
+}

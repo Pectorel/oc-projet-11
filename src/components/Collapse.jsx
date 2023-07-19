@@ -13,7 +13,7 @@ function Collapse(props) {
   });
   const contentRef = useRef(null);
   const [height, setHeight] = useState(() => {
-    return 0;
+    return "0px";
   });
   const contentTextRef = useRef(null);
 
