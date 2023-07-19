@@ -45,9 +45,6 @@
     list-style: none;
 }
 
-/* TODO : Put icon class in App.css */
-
-
 .chevron::after {
     background-image: url("../../img/chevron-round.svg");
     transition: transform .2s ease-out;
