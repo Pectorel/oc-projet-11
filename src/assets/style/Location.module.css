@@ -1,6 +1,5 @@
 #page-root {
     margin: 1.25rem auto;
-
 }
 
 #location-details {
@@ -9,10 +8,18 @@
     align-items: stretch;
 }
 
+@media screen and (width <= 48rem) {
+    #location-details{
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
 #location-details header{
     flex-direction: column;
     justify-content: space-between;
 }
+
 
 .title {
     font-size: 2.25rem;
@@ -33,6 +40,13 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 2rem;
+}
+
+@media screen and (width <= 48rem) {
+    #secondary-details{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
 }
 
 #host-details{
@@ -61,3 +75,4 @@
 #collapse-container > *{
     flex-basis: 50%;
 }
+
