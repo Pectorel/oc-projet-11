@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 Collapse.propTypes = {
   collapseTitle: PropTypes.string.isRequired,
+  className: PropTypes.string,
   children: PropTypes.element,
 };
 function Collapse(props) {
@@ -30,7 +31,6 @@ function Collapse(props) {
   }, []);
 
   useEffect(() => {
-    console.log(open);
     if (open) {
       contentRef.current.style.height = height;
     } else {
@@ -39,7 +39,11 @@ function Collapse(props) {
   }, [open, height]);
 
   return (
-    <article className={`${styles.collapse}${open ? ` ${styles.open}` : ""}`}>
+    <article
+      className={`${styles.collapse}${open ? ` ${styles.open}` : ""}${
+        props.className ? ` ${props.className}` : ""
+      }`}
+    >
       <header className={"d-flex"}>
         <h3>{props.collapseTitle}</h3>
         <span
