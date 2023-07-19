@@ -29,7 +29,7 @@ function Rating(props) {
     return content;
   };
 
-  return <div className={`${styles.rating} d-flex`}>{getRating()}</div>;
+  return getRating();
 }
 
 export default Rating;

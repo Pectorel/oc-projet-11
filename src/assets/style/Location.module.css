@@ -25,6 +25,7 @@
 #tags-container {
     margin-top: 1.25rem;
     gap: .625rem;
+    flex-wrap: wrap;
 }
 
 #secondary-details {
@@ -32,6 +33,10 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 2rem;
+}
+
+#rating{
+    gap: 1rem;
 }
 
 #host-details {
@@ -65,6 +70,10 @@
 }
 
 @media screen and (width <= 40rem){
+    #location-details{
+        margin-top: 1rem;
+    }
+
     .title{
         font-size: 1.125rem;
     }
@@ -73,10 +82,40 @@
         font-size: .875rem;
     }
 
-
+    #rating{
+        gap: .5rem;
+    }
 
     #collapse-container{
         flex-direction: column;
         align-items: stretch;
+        gap: 1.25rem;
     }
+
+}
+
+@media screen and (width <= 20rem) {
+    #location-details{
+        align-items: center;
+    }
+
+    #location-details header{
+        align-items: center;
+        text-align: center;
+    }
+
+    #tags-container{
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    #secondary-details{
+        margin-top: 1rem;
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
 }

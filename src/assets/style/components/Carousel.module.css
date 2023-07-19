@@ -1,5 +1,5 @@
 :root{
-    --carousel-bg-color: #fff;
+    --carousel-bg-color: var(--color-bg-secondary);
     --carousel-txt-color: #fff;
     --carousel-arrow-bg-color: rgba(0 0 0 / 20%);
 }
@@ -90,4 +90,21 @@
     100%{
         opacity: 0;
     }
+}
+
+/* Responsive */
+@media screen and (width <= 40rem)  {
+    .carousel::after{
+        padding-bottom: 76%;
+    }
+
+    .arrow{
+        width: 15%;
+    }
+
+    .slide-index{
+        display: none;
+    }
+
+
 }

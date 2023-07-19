@@ -14,3 +14,13 @@
     min-height: 25px;
     text-align: center;
 }
+
+/* Responsive */
+@media screen and (width <= 40rem) {
+    .tag{
+        min-width: 0;
+        min-height: 0;
+        font-size: .625rem;
+    }
+
+}

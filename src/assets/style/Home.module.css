@@ -25,7 +25,16 @@
         padding: 2rem;
         row-gap: 2rem;
     }
+}
 
+@media screen and (width <= 40rem) {
+    #page-root{
+        margin: 1rem auto;
+    }
+
+    #locations{
+        margin-top: 1.375rem;
+    }
 }
 
 @media screen and (width <= 33.75rem) {

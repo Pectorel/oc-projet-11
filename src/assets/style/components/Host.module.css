@@ -9,3 +9,15 @@
     width: 64px;
     height: auto;
 }
+
+/* Responsive */
+@media screen and (width <= 40rem) {
+    .host-name{
+        font-size: 1rem;
+    }
+
+    .profile-picture{
+        width: 40px;
+    }
+
+}
