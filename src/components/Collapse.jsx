@@ -26,7 +26,7 @@ function Collapse(props) {
   useEffect(() => {
     setHeight(`${contentTextRef.current.offsetHeight}px`);
     window.addEventListener("resize", () => {
-      setHeight("200px");
+      setHeight(`${contentTextRef.current.offsetHeight}px`);
     });
   }, []);
 
