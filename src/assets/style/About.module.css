@@ -1,5 +1,5 @@
 #page-root{
-    margin-top: 2.75rem;
+    margin: 2.75rem auto;
 }
 
 .banner{
@@ -9,7 +9,7 @@
 
 .collapse-wrapper{
     width: 80%;
-    margin: 2.125rem auto;
+    margin: 2.125rem auto 0;
 }
 
 .collapse{
@@ -27,4 +27,29 @@
 
 .collapse > *{
     font-size: inherit;
+}
+
+.collapse > section > *{
+    padding: 1rem 1rem .5rem;
+}
+
+/* Responsive */
+@media screen and (width <= 40rem) {
+    #page-root{
+        margin: 1rem auto;
+    }
+
+    .collapse-wrapper{
+        margin-top: 1.25rem;
+        width: 100%;
+    }
+
+    .collapse{
+        font-size: .875rem;
+    }
+
+    .collapse header{
+        font-size: 1rem;
+    }
+
 }
