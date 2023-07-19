@@ -1,20 +1,20 @@
 /*
-    Main CSS File containing all global data and classes
+    Main CSS File containing all Global custom properties, css properties and classes
 */
 
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-/* App settings */
+/* App Global Settings */
 :root {
     /* === Global Custom Properties */
 
-        /* Colors */
+    /* Colors */
     --color-bg-primary: #fff;
     --color-bg-secondary: #ff6060;
     --color-txt-primary: var(--color-bg-secondary);
     --color-txt-secondary: var(--color-bg-primary);
-    
+
     /* === Font */
     font-family: Montserrat, sans-serif;
     font-weight: 500;
@@ -72,52 +72,6 @@
     display: grid;
 }
 
-@media screen and (width < 80rem){
-    .large-only{
-        display: none;
-    }
-}
-
-.medium-only{
-    display: none;
-}
-
-@media screen and (width > 48rem) and (width <= 80rem){
-    .medium-only{
-        display: block;
-    }
-}
-
-.medium-down{
-    display: none;
-}
-
-@media screen and (width <= 80rem){
-    .medium-down{
-        display: block;
-    }
-}
-
-.small-down{
-    display: none;
-}
-
-@media screen and (width <= 48rem){
-    .small-down{
-        display: block;
-    }
-}
-
-.very-small-only{
-    display: none;
-}
-
-@media screen and (width <= 40rem){
-    .very-small-only{
-        display: block;
-    }
-}
-
 /* Icons */
 .icon {
     position: relative;
@@ -136,4 +90,51 @@
     transform: translate(-50%, -50%);
     background: transparent no-repeat center center;
     background-size: contain;
+}
+
+/* Responsive Classes */
+@media screen and (width < 80rem) {
+    .large-only {
+        display: none;
+    }
+}
+
+.medium-only {
+    display: none;
+}
+
+@media screen and (width > 48rem) and (width <= 80rem) {
+    .medium-only {
+        display: block;
+    }
+}
+
+.medium-down {
+    display: none;
+}
+
+@media screen and (width <= 80rem) {
+    .medium-down {
+        display: block;
+    }
+}
+
+.small-down {
+    display: none;
+}
+
+@media screen and (width <= 48rem) {
+    .small-down {
+        display: block;
+    }
+}
+
+.very-small-only {
+    display: none;
+}
+
+@media screen and (width <= 40rem) {
+    .very-small-only {
+        display: block;
+    }
 }
