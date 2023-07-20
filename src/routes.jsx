@@ -40,7 +40,7 @@ async function locationLoader(params) {
   let row = await loaderUtilities.checkData("/data/data.json", [
     {
       objectField: "id",
-      paramField: params.logementId,
+      paramField: params["logementId"],
     },
   ]);
   // If not in DB, then throw error and send to Error Page
