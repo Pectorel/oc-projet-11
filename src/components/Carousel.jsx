@@ -80,9 +80,9 @@ function Carousel(props) {
   // ========= Autoplay Feature
   // Switch Autoplay for the mouseDown / mouseLeave event on Carousel DOM
   const autoplayEventHandler = (event) => {
-    if (event.name === "mouseenter") {
+    if (event.type === "mouseenter") {
       setPauseAutoplay(true);
-    } else if (event.name === "mouseleave") {
+    } else if (event.type === "mouseleave") {
       setPauseAutoplay(false);
     }
   };
