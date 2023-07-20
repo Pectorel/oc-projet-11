@@ -78,7 +78,7 @@ function Carousel(props) {
   }, [currentSlide, width]);
 
   // ========= Autoplay Feature
-  // Switch Autoplay for the mouseDown / mouseLeave event on Carousel DOM
+  // Pause the Carousel if hovered, and start it again if mouse cursor leaves it
   const autoplayEventHandler = (event) => {
     if (event.type === "mouseenter") {
       setPauseAutoplay(true);
@@ -104,7 +104,7 @@ function Carousel(props) {
   useEffect(() => {
     // If autoplay feature is enabled
     if (props.autoplay) {
-      // Set mouse Events on the Carousel DOM
+      // Set mouse Events to pause Autoplay on the Carousel DOM
       ref.current.addEventListener("mouseenter", autoplayEventHandler);
       ref.current.addEventListener("mouseleave", autoplayEventHandler);
       // Initialize the Autoplay Interval
