@@ -44,7 +44,7 @@ function Carousel(props) {
   };
   // Contains all global DOM EventListener
   useEffect(() => {
-    // We first set the width at page startup and then on Window Resize
+    // We first set the slides width at page startup and then on Window Resize
     setWidth(ref.current.offsetWidth);
     window.addEventListener("resize", changeWidth);
     // We set Keyboard Event for switching slides
@@ -90,7 +90,7 @@ function Carousel(props) {
   const autoplayHandler = (state) => {
     // Only triggers if autoplay was not already paused
     if (props.autoplay) {
-      // We set a Timeout to reenable autoplay a short time after the slide changed
+      // We set a Timeout to re-enable autoplay a short time after the slide changed
       setPauseAutoplay((prevState) => {
         if (!prevState) {
           setTimeout(() => {
@@ -155,7 +155,7 @@ function Carousel(props) {
 
 // ========= Slide Component (Only used in Carousel)
 /* Slides props contains the img src string
- * and its width (basically the carousel root width)
+ * and its width to fill the whole carousel (basically the carousel root width)
  */
 Slide.propTypes = {
   img: PropTypes.string.isRequired,
