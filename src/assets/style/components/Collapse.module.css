@@ -69,6 +69,19 @@
     transition: transform var(--collapse-transition-duration) ease-out;
 }
 
-.open .chevron::after{
+.open .chevron::after {
     transform: translate(-50%, -50%) rotateZ(180deg);
+}
+
+/* Responsive */
+
+@media screen and (width <= 48rem) {
+    .collapse header {
+        font-size: .875rem;
+    }
+
+    .content > *{
+        font-size: .75rem;
+        padding: 1.25rem 1.25rem .5rem;
+    }
 }
