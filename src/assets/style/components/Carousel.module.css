@@ -6,17 +6,11 @@
 
 .carousel{
     width: 100%;
-    height: auto;
+    height: 415px;
     background: var(--carousel-bg-color);
     overflow: hidden;
     position: relative;
     border-radius: 10px;
-}
-
-.carousel::after{
-    content: "";
-    display: block;
-    padding-bottom: 33.5%;
 }
 
 .arrows-container{
@@ -93,6 +87,15 @@
 }
 
 /* Responsive */
+
+@media screen and (width <= 48em) {
+    .arrows-container{
+        opacity: 1;
+        animation: none;
+    }
+
+}
+
 @media screen and (width <= 40rem)  {
     .carousel::after{
         padding-bottom: 76%;
