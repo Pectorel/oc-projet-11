@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import styles from "../assets/style/components/Thumb.module.css";
 
 Thumb.propTypes = {
-  link: PropTypes.string,
   thumbTitle: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
 };
